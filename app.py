@@ -31,6 +31,6 @@ def get_comic_prices():
     }
 
 # Run the app (for local development)
-if __name__ == "__main__":
+if __name__ == "__master__":
     app.run(debug=True)
 
