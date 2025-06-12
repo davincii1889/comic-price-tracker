@@ -18,7 +18,7 @@ def home():
 
 # eBay Account Deletion Notification verification route
 
-@@app.route("/ebay/delete-account-callback", methods=["POST"])
+@app.route("/ebay/delete-account-callback", methods=["POST"])
 def ebay_delete_notification():
     # This must return the exact token string with a 200 status code
     return make_response("comicprice123tokenabc456def789ghi000jkl", 200)
@@ -32,6 +32,6 @@ def get_comic_prices():
     }
 
 # Run the app (for local development)
-if __name__ == "__master__":
+if __name__ == "__main__":
     app.run(debug=True)
 
