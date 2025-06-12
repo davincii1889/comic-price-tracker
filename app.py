@@ -18,9 +18,12 @@ def home():
 
 # eBay Account Deletion Notification verification route
 
-@app.route("/ebay/delete-account-callback", methods=["POST"])
+@app.route("/ebay/delete-account-callback", methods=["GET", "POST", "HEAD", "OPTIONS", "PUT"])
 def ebay_delete_notification():
-    return "comicprice123tokenabc456def789ghi000jkl", 200
+    # Return token as plain text
+    resp = make_response("comicprice123tokenabc456def789ghi000jkl", 200)
+    resp.mimetype = "text/plain"
+    return resp
 
 # Placeholder for a future route to fetch comic prices
 @app.route("/api/comics")
